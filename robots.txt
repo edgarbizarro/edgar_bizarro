@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.edgarbizarro.com.br/sitemap.xml
+
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /cgi-bin/
+
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+Crawl-delay: 10
