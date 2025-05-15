@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -220,10 +220,85 @@
                 opacity: 0;
             }
         }
+
+        /* Estilos para animações de scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        /* Barra de progresso de scroll */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, #10B981, #14B8A6);
+            z-index: 9999;
+            transition: width 0.2s ease;
+        }
+
+        /* Botão de voltar ao topo */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(to right, #10B981, #14B8A6);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 
 <body class="bg-gray-900 text-white">
+    <!-- Barra de Progresso -->
+    <div class="scroll-progress"></div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
     <!-- Preloader -->
     <div class="preloader">
         <div class="terminal">
@@ -434,7 +509,7 @@
     </section>
 
     <!-- Projetos Section -->
-    <section id="projetos" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-950">
+    <section id="projetos" class="reveal w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-950">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                 <div
@@ -772,6 +847,50 @@
                 }, cmd.delay);
             });
         });
+    </script>
+
+    <!-- Scripts -->
+    <script>
+        // Função para revelar elementos durante o scroll
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            const elementVisible = 150;
+
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        // Função para atualizar a barra de progresso
+        function updateScrollProgress() {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / totalScroll) * 100;
+            scrollProgress.style.width = `${scrolled}%`;
+        }
+
+        // Função para mostrar/ocultar o botão de voltar ao topo
+        function toggleBackToTop() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('scroll', updateScrollProgress);
+        window.addEventListener('scroll', toggleBackToTop);
+
+        // Trigger initial reveal
+        reveal();
     </script>
 </body>
 
