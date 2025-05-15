@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,9 +37,11 @@
         .animation-delay-2000 {
             animation-delay: 2s;
         }
+
         .animation-delay-4000 {
             animation-delay: 4s;
         }
+
         /* Estilos do Preloader Terminal */
         .preloader {
             position: fixed;
@@ -53,9 +56,11 @@
             z-index: 9999;
             transition: opacity 0.5s ease-in-out;
         }
+
         .preloader.fade-out {
             opacity: 0;
         }
+
         .terminal {
             width: 600px;
             max-width: 90%;
@@ -68,6 +73,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .terminal::before {
             content: '';
             position: absolute;
@@ -82,34 +88,49 @@
             display: flex;
             align-items: center;
         }
+
         .terminal-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
             padding-top: 10px;
         }
+
         .terminal-buttons {
             display: flex;
             gap: 8px;
         }
+
         .terminal-button {
             width: 12px;
             height: 12px;
             border-radius: 50%;
         }
-        .terminal-button.red { background: #ff5f56; }
-        .terminal-button.yellow { background: #ffbd2e; }
-        .terminal-button.green { background: #27c93f; }
+
+        .terminal-button.red {
+            background: #ff5f56;
+        }
+
+        .terminal-button.yellow {
+            background: #ffbd2e;
+        }
+
+        .terminal-button.green {
+            background: #27c93f;
+        }
+
         .terminal-title {
             color: #6b7280;
             font-size: 12px;
             margin-left: 16px;
         }
+
         .terminal-content {
             color: #fff;
             font-size: 14px;
             line-height: 1.5;
         }
+
         .terminal-line {
             margin: 8px 0;
             opacity: 0;
@@ -117,21 +138,26 @@
             animation: fadeInUp 0.3s ease forwards;
             display: flex;
         }
+
         .terminal-prompt {
             color: #10B981;
             margin-right: 8px;
         }
+
         .terminal-command {
             color: #60A5FA;
         }
+
         .terminal-output {
             color: #9CA3AF;
             padding-left: 24px;
         }
+
         .terminal-success {
             color: #34D399;
             padding-left: 24px;
         }
+
         .terminal-progress {
             width: 100%;
             height: 2px;
@@ -140,6 +166,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .terminal-progress::after {
             content: '';
             position: absolute;
@@ -150,20 +177,29 @@
             background: #10B981;
             animation: progress 2s ease forwards;
         }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         @keyframes progress {
-            from { width: 0; }
-            to { width: 100%; }
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
+
         .cursor {
             display: inline-block;
             width: 8px;
@@ -172,12 +208,21 @@
             margin-left: 4px;
             animation: blink 1s infinite;
         }
+
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
     </style>
 </head>
+
 <body class="bg-gray-900 text-white">
     <!-- Preloader -->
     <div class="preloader">
@@ -202,14 +247,21 @@
         <div class="absolute inset-0 bg-[url('noise.png')] opacity-30 mix-blend-soft-light"></div>
 
         <!-- Círculos decorativos -->
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-500 rounded-full filter blur-3xl opacity-20 animate-blob"></div>
-        <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-yellow-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div class="absolute bottom-1/4 right-1/3 w-80 h-80 bg-teal-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div
+            class="absolute top-1/4 left-1/4 w-64 h-64 bg-pink-500 rounded-full filter blur-3xl opacity-20 animate-blob">
+        </div>
+        <div
+            class="absolute top-1/3 right-1/4 w-72 h-72 bg-yellow-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute bottom-1/4 right-1/3 w-80 h-80 bg-teal-500 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-4000">
+        </div>
 
         <div class="container px-4 md:px-6 mx-auto relative z-10">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="flex flex-col justify-center space-y-4">
-                    <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-2">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-2">
                         <span class="flex h-2 w-2 rounded-full bg-emerald-400 mr-2"></span>
                         Disponível para novos projetos
                     </div>
@@ -222,34 +274,44 @@
                             em soluções digitais
                         </h1>
                         <p class="max-w-[600px] text-gray-200 md:text-xl mb-6">
-                            Desenvolvedor Web Especialista em Escalabilidade, Laravel e Soluções Personalizadas para empresas que
-                            buscam excelência.
+                            Desenvolvedor Web PHP
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3">
-                            <a href="#contato" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white">
+                            <a href="#contato"
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white">
                                 Entre em Contato
-                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </a>
-                            <a href="#projetos" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm">
+                            <a href="#projetos"
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/20 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm">
                                 Ver Projetos
-                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
                                 </svg>
                             </a>
                         </div>
                     </div>
                     <div class="flex items-center gap-4 mt-8">
                         <div class="flex -space-x-2">
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center text-white text-xs">
+                            <div
+                                class="w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center text-white text-xs">
                                 JS
                             </div>
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xs">
+                            <div
+                                class="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xs">
                                 PHP
                             </div>
-                            <div class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white text-xs">
+                            <div
+                                class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white text-xs">
                                 DB
                             </div>
                         </div>
@@ -258,8 +320,11 @@
                 </div>
                 <!-- Terminal Section -->
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20 animate-pulse"></div>
-                    <div class="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20 animate-pulse">
+                    </div>
+                    <div
+                        class="relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm p-8 rounded-2xl border border-white/10">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center gap-2">
                                 <div class="w-3 h-3 rounded-full bg-red-500"></div>
@@ -270,10 +335,12 @@
                         </div>
                         <div class="space-y-3 font-mono">
                             <div class="text-gray-300">
-                                <span class="text-emerald-400">$</span> <span class="text-purple-400">php</span> artisan make:controller <span class="text-emerald-400">PortfolioController</span>
+                                <span class="text-emerald-400">$</span> <span class="text-purple-400">php</span> artisan
+                                make:controller <span class="text-emerald-400">PortfolioController</span>
                             </div>
                             <div class="text-gray-300">
-                                <span class="text-emerald-400">$</span> <span class="text-purple-400">cat</span> app/Http/Controllers/PortfolioController.php
+                                <span class="text-emerald-400">$</span> <span class="text-purple-400">cat</span>
+                                app/Http/Controllers/PortfolioController.php
                             </div>
                             <div class="text-gray-300">
                                 <span class="text-purple-400">&lt;?php</span>
@@ -285,21 +352,27 @@
                                 <span class="text-purple-400">use</span> Illuminate\Http\Request;
                             </div>
                             <div class="text-gray-300">
-                                <span class="text-purple-400">class</span> <span class="text-emerald-400">PortfolioController</span> <span class="text-purple-400">extends</span> Controller
+                                <span class="text-purple-400">class</span> <span
+                                    class="text-emerald-400">PortfolioController</span> <span
+                                    class="text-purple-400">extends</span> Controller
                             </div>
                             <div class="text-gray-300">{</div>
                             <div class="pl-4 text-gray-300">
-                                <span class="text-purple-400">public function</span> <span class="text-emerald-400">createAmazingWebsite</span>()
+                                <span class="text-purple-400">public function</span> <span
+                                    class="text-emerald-400">createAmazingWebsite</span>()
                             </div>
                             <div class="pl-4 text-gray-300">{</div>
                             <div class="pl-8 text-gray-300">
                                 $developer = <span class="text-amber-400">"Edgar Bizarro"</span>;
                             </div>
                             <div class="pl-8 text-gray-300">
-                                $skills = [<span class="text-amber-400">"Laravel"</span>, <span class="text-amber-400">"Full-Stack"</span>, <span class="text-amber-400">"Escalabilidade"</span>];
+                                $skills = [<span class="text-amber-400">"Laravel"</span>, <span
+                                    class="text-amber-400">"Full-Stack"</span>, <span
+                                    class="text-amber-400">"Escalabilidade"</span>];
                             </div>
                             <div class="pl-8 text-gray-300">
-                                <span class="text-purple-400">return</span> <span class="text-amber-400">"Soluções Personalizadas de Alta Qualidade"</span>;
+                                <span class="text-purple-400">return</span> <span class="text-amber-400">"Soluções
+                                    Personalizadas de Alta Qualidade"</span>;
                             </div>
                             <div class="pl-4 text-gray-300">}</div>
                             <div class="text-gray-300">}</div>
@@ -315,32 +388,45 @@
     <section id="sobre" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-950 to-gray-900">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <div class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
+                <div
+                    class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
                     Sobre Mim
                 </div>
-                <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500 pb-5">
+                <h2
+                    class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500 pb-5">
                     Edgar Bizarro
                 </h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8 mt-8 items-center">
                 <div class="flex justify-center">
                     <div class="relative w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full">
-                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse blur-md"></div>
-                        <div class="absolute inset-1 bg-gray-900 rounded-full overflow-hidden">
-                            <img src="https://avatars.githubusercontent.com/u/19916149?v=4" alt="Edgar Bizarro" class="object-cover w-full h-full">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse blur-md">
                         </div>
-                        <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mix-blend-overlay opacity-30"></div>
+                        <div class="absolute inset-1 bg-gray-900 rounded-full overflow-hidden">
+                            <img src="https://avatars.githubusercontent.com/u/19916149?v=4" alt="Edgar Bizarro"
+                                class="object-cover w-full h-full">
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mix-blend-overlay opacity-30">
+                        </div>
                     </div>
                 </div>
                 <div class="space-y-6 text-left">
                     <p class="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Olá! 👋 Sou o <span class="font-semibold text-emerald-400">Edgar Bizarro</span>, desenvolvedor web apaixonado por transformar ideias em sistemas eficientes, bonitos e funcionais.
+                        Olá! 👋 Sou o <span class="font-semibold text-emerald-400">Edgar Bizarro</span>, desenvolvedor
+                        web apaixonado por transformar ideias em sistemas eficientes, bonitos e funcionais.
                     </p>
                     <p class="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Com mais de <span class="font-semibold">7 anos de experiência</span> no mercado, atuei em empresas de tecnologia, instituições de ensino e projetos sob demanda, sempre focando em entregar soluções que realmente façam a diferença no dia a dia dos negócios.
+                        Com mais de <span class="font-semibold">7 anos de experiência</span> no mercado, atuei em
+                        empresas de tecnologia, instituições de ensino e projetos sob demanda, sempre focando em
+                        entregar soluções que realmente façam a diferença no dia a dia dos negócios.
                     </p>
                     <p class="text-gray-300 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Minha principal especialidade é o desenvolvimento com <span class="font-semibold text-blue-400">PHP</span> utilizando o framework <span class="font-semibold text-emerald-400">Laravel</span> — incluindo recursos avançados como Horizon, Livewire e a stack TALL.
+                        Minha principal especialidade é o desenvolvimento com <span
+                            class="font-semibold text-blue-400">PHP</span> utilizando o framework <span
+                            class="font-semibold text-emerald-400">Laravel</span> — incluindo recursos avançados como
+                        Horizon, Livewire e a stack TALL.
                     </p>
                 </div>
             </div>
@@ -351,17 +437,22 @@
     <section id="projetos" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-950">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <div class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
+                <div
+                    class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
                     Projetos
                 </div>
-                <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
+                <h2
+                    class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
                     Trabalhos Recentes
                 </h2>
             </div>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Projeto 1 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                     <h3 class="text-xl font-semibold text-white mb-2">Sistema de Gestão Empresarial</h3>
                     <p class="text-gray-300 mb-4">Desenvolvimento de um sistema completo para gestão de empresas usando Laravel e Vue.js.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -369,18 +460,22 @@
                         <span class="px-2 py-1 text-xs rounded-full bg-green-500/20 text-green-400">Vue.js</span>
                         <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400">MySQL</span>
                     </div>
-                    <a href="#" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
+                    <a href="https://github.com/edgarbizarro/erp-php" target="_blank" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
                         Ver Detalhes
                         <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                     </a>
                 </div>
 
                 <!-- Projeto 2 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                     <h3 class="text-xl font-semibold text-white mb-2">Automação de Processos</h3>
                     <p class="text-gray-300 mb-4">Sistema de automação para processos empresariais usando Python e Selenium.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -388,30 +483,58 @@
                         <span class="px-2 py-1 text-xs rounded-full bg-blue-500/20 text-blue-400">Selenium</span>
                         <span class="px-2 py-1 text-xs rounded-full bg-red-500/20 text-red-400">PyAutoGUI</span>
                     </div>
-                    <a href="#" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
+                    <a href="https://github.com/edgarbizarro/walletw" target="_blank" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
                         Ver Detalhes
                         <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                     </a>
                 </div>
 
                 <!-- Projeto 3 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
-                    <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
                     <h3 class="text-xl font-semibold text-white mb-2">API RESTful</h3>
-                    <p class="text-gray-300 mb-4">Desenvolvimento de API escalável para integração de sistemas usando Laravel.</p>
+                    <p class="text-gray-300 mb-4">Uma API RESTful para gerenciar carteiras digitais, incluindo funcionalidades de depósito, transferência e reversão de transações.</p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-2 py-1 text-xs rounded-full bg-blue-500/20 text-blue-400">Laravel</span>
                         <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400">PostgreSQL</span>
-                        <span class="px-2 py-1 text-xs rounded-full bg-red-500/20 text-red-400">Redis</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400">MySQL</span>
                     </div>
-                    <a href="#" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
+                    <a href="https://github.com/edgarbizarro/api-rest-php" target="_blank" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
                         Ver Detalhes
                         <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Projeto 4 -->
+                <div
+                    class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 p-6 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Sistema de Campanhas (pronto para ser consumido por uma SPA)</h3>
+                    <p class="text-gray-300 mb-4">A API gerencia estados, cidades, clusters (grupos de cidades), campanhas, produtos e descontos, com relacionamentos e regras de negócio bem definidas.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-blue-500/20 text-blue-400">Laravel</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-green-500/20 text-green-400">Vue.js</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-purple-500/20 text-purple-400">MySQL</span>
+                    </div>
+                    <a href="https://github.com/edgarbizarro/spagc" target="_blank" class="inline-flex items-center text-emerald-400 hover:text-emerald-300">
+                        Ver Detalhes
+                        <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
                         </svg>
                     </a>
                 </div>
@@ -423,10 +546,12 @@
     <section id="habilidades" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-950 to-gray-900">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <div class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
+                <div
+                    class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
                     Habilidades
                 </div>
-                <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
+                <h2
+                    class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500  pb-5">
                     Tecnologias & Ferramentas
                 </h2>
             </div>
@@ -514,10 +639,12 @@
     <section id="contato" class="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-gray-900 to-gray-950">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-                <div class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
+                <div
+                    class="inline-block rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-3 py-1 text-sm text-white">
                     Contato
                 </div>
-                <h2 class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
+                <h2
+                    class="text-3xl font-bold tracking-tighter sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
                     Vamos Trabalhar Juntos
                 </h2>
                 <p class="max-w-[600px] text-gray-300 md:text-xl">
@@ -526,22 +653,30 @@
             </div>
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
                 <!-- Email -->
-                <a href="mailto:contato@edgarbizarro.com" class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                <a href="mailto:edgar.h.bizarro@gmail.com"
+                    class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
                     <div class="h-12 w-12 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
-                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">Email</h3>
-                    <p class="text-gray-300 text-center">contato@edgarbizarro.com</p>
+                    <p class="text-gray-300 text-center">edgar.h.bizarro@gmail.com</p>
                 </a>
 
                 <!-- LinkedIn -->
-                <a href="https://linkedin.com/in/edgarbizarro" target="_blank" class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                <a href="https://linkedin.com/in/edgar-bizarro" target="_blank"
+                    class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
                     <div class="h-12 w-12 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
-                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
                         </svg>
@@ -551,10 +686,15 @@
                 </a>
 
                 <!-- GitHub -->
-                <a href="https://github.com/edgarbizarro" target="_blank" class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
+                <a href="https://github.com/edgarbizarro" target="_blank"
+                    class="group flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-white/10 hover:border-emerald-500/50 transition-colors">
                     <div class="h-12 w-12 rounded-full bg-emerald-500/20 flex items-center justify-center mb-4">
-                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        <svg class="h-6 w-6 text-emerald-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
                         </svg>
                     </div>
                     <h3 class="text-lg font-semibold text-white mb-2">GitHub</h3>
@@ -568,25 +708,17 @@
     <footer class="w-full py-8 bg-gray-950">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
-                <p class="text-gray-300">© 2024 Edgar Bizarro. Todos os direitos reservados.</p>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-emerald-400">
-                        Termos
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-emerald-400">
-                        Privacidade
-                    </a>
-                </div>
+                <p class="text-gray-300">© 2025 Edgar Bizarro.</p>
             </div>
         </div>
     </footer>
 
     <!-- Script do Preloader -->
     <script>
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             const preloader = document.querySelector('.preloader');
             const terminalLines = document.querySelector('.terminal-lines');
-            
+
             const commands = [
                 { type: 'command', text: 'npm install', delay: 0 },
                 { type: 'output', text: 'Instalando dependências...', delay: 300 },
@@ -606,7 +738,7 @@
             function addLine(type, text) {
                 const line = document.createElement('div');
                 line.className = 'terminal-line';
-                
+
                 if (type === 'command') {
                     line.innerHTML = `
                         <span class="terminal-prompt">$</span>
@@ -619,7 +751,7 @@
                 } else {
                     line.innerHTML = `<span class="terminal-output">${text}</span>`;
                 }
-                
+
                 terminalLines.appendChild(line);
                 terminalLines.scrollTop = terminalLines.scrollHeight;
             }
@@ -627,7 +759,7 @@
             commands.forEach((cmd, index) => {
                 setTimeout(() => {
                     addLine(cmd.type, cmd.text);
-                    
+
                     // Remove o preloader após o último comando
                     if (index === commands.length - 1) {
                         setTimeout(() => {
@@ -642,4 +774,5 @@
         });
     </script>
 </body>
-</html> 
+
+</html>
